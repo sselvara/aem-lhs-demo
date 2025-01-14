@@ -7,6 +7,7 @@ function initGTranslate() {
     }
   };
   script.async = true;
+  script.defer = true;
   document.body.append(script);
 }
 
