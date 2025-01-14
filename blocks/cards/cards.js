@@ -1,4 +1,4 @@
-import { createOptimizedPicture, waitForFirstImage } from '../../scripts/aem.js';
+import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   /* change to ul, li */
@@ -15,5 +15,4 @@ export default async function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, true, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
-  await waitForFirstImage(block);
 }
