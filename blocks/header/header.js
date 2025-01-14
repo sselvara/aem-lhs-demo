@@ -108,7 +108,7 @@ function initGTranslate() {
   script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
   script.onload = () => {
     if (typeof googleTranslateElementInit === 'function') {
-      googleTranslateElementInit();
+      window.googleTranslateElementInit();
     }
   };
   script.async = true;
