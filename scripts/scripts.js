@@ -46,8 +46,8 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-     buildHeroBlock(main);
-     console.log('Auto Blocking ignored', main);
+    buildHeroBlock(main);
+    console.log('Auto Blocking ignored', main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
