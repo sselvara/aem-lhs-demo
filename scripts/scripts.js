@@ -68,15 +68,6 @@ export function decorateMain(main) {
   decorateBlocks(main);
 }
 
-function loadChat() {
-  const s1 = document.createElement('script');
-  const s0 = document.getElementsByTagName('script')[0];
-  s1.src = 'https://embed.tawk.to/6786efa4825083258e05083e/1ihjhg70t';
-  s1.setAttribute('crossorigin', '*');
-  s0.parentNode.insertBefore(s1, s0);
-  document.body.appendChild(s1);
-}
-
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
@@ -91,6 +82,7 @@ async function loadEager(doc) {
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 
+
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
     if (window.innerWidth >= 900 || sessionStorage.getItem('fonts-loaded')) {
@@ -99,8 +91,6 @@ async function loadEager(doc) {
   } catch (e) {
     // do nothing
   }
-
-  loadChat();
 }
 
 /**
