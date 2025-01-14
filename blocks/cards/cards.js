@@ -16,5 +16,4 @@ export default async function decorate(block) {
   block.textContent = '';
   block.append(ul);
   await waitForFirstImage(block);
-  console.log('Decorated cards');
 }

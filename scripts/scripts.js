@@ -47,6 +47,7 @@ async function loadFonts() {
 function buildAutoBlocks(main) {
   try {
      buildHeroBlock(main);
+     console.log('Auto Blocking ignored', main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -62,7 +63,7 @@ export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
   decorateIcons(main);
-  // buildAutoBlocks(main);
+  buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
 }
