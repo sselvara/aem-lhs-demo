@@ -1,4 +1,4 @@
-import { waitForFirstImage } from "../../scripts/aem";
+import { waitForFirstImage } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const cols = [...block.firstElementChild.children];
