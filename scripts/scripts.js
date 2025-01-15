@@ -47,6 +47,7 @@ async function loadFonts() {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    console.log('Auto Blocking ignored', main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -66,6 +67,16 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
 }
+
+// function loadChat() {
+//   const s1 = document.createElement('script');
+//   const s0 = document.getElementsByTagName('script')[0];
+//   s1.src = 'https://embed.tawk.to/6786efa4825083258e05083e/1ihjhg70t';
+//   s1.setAttribute('crossorigin', '*');
+//   s1.async = true;
+//   s0.parentNode.insertBefore(s1, s0);
+//   document.body.appendChild(s1);
+// }
 
 /**
  * Loads everything needed to get to LCP.
@@ -89,6 +100,8 @@ async function loadEager(doc) {
   } catch (e) {
     // do nothing
   }
+
+  // loadChat();
 }
 
 /**
