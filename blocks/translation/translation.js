@@ -6,6 +6,8 @@ function initGTranslate() {
       window.googleTranslateElementInit();
     }
   };
+  script.async = true;
+  script.defer = true;
   document.body.append(script);
 }
 
